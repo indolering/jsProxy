@@ -6,11 +6,7 @@ function measure(obj, id) {
     const element = document.getElementById(id),
         started = performance.now();
     for (let i = 0; i < COUNT; i += 1) {
-        obj[i] = i;
-        obj[i];
-        i in obj;
-        Object.getOwnPropertyDescriptor(obj, i);
-        delete obj[i];  
+        obj.counter = i;
     }
     element.innerText = Math.round(performance.now() - started);
 }
